@@ -1,7 +1,5 @@
 # Wedding page project
 
----
-
 ## How to run
 
 #### Prerequisities
