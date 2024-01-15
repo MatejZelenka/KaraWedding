@@ -1,29 +1,20 @@
 {
-  "name": "weddingweb",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "wedding",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack serve",
-    "build": "webpack"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "css-loader": "^6.8.1",
-    "file-loader": "^6.2.0",
-    "postcss": "^8.4.32",
-    "postcss-loader": "^7.3.4",
-    "postcss-preset-env": "^9.3.0",
-    "style-loader": "^3.3.3",
-    "tailwindcss": "^3.4.0",
-    "webpack": "^5.89.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
+    "vite": "^5.0.8"
   },
   "dependencies": {
-    "swiper": "^11.0.5"
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.33",
+    "swiper": "^11.0.5",
+    "tailwindcss": "^3.4.1"
   }
 }

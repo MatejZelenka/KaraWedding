@@ -1,5 +1,8 @@
-module.exports = {
-  content: ['./dist/*.html'],
+/** @type {import('tailwindcss').Config} */
+import tailwindcss from 'tailwindcss';
+
+export default {
+  content: ["./*.{html,js}"],
   theme: {
     extend: {
       height: theme => ({
@@ -33,3 +36,4 @@ module.exports = {
   },
   plugins: [],
 }
+
