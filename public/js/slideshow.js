@@ -3,7 +3,8 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css/bundle';
 
 
-export const swiper = new Swiper('.swiper', {
+export const swiper = () => {
+  return new Swiper('.swiper', {
     modules: [Navigation, Pagination, Autoplay],
     effect: 'fade',
     autoplay: {delay: 5000},
@@ -13,19 +14,19 @@ export const swiper = new Swiper('.swiper', {
     speed: 1500,
     slidesPerView: 1,
     spaceBetween: 5,
-    crossFade: true,
     pagination: {
       clickable: true,
       el: '.swiper-pagination',
       type: "bullets",
     },
-  
+
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-  
+
     scrollbar: {
       el: '.swiper-scrollbar',
     },
   });
+};
