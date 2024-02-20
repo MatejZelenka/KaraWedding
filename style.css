@@ -3,12 +3,19 @@
 @tailwind utilities;
 
 
+@layer utilities {
+  .text-justify-last {
+    text-align: justify;
+    text-align-last: center;
+  }
+}
 
 /* SwiperJS styles */
 .swiper-button-prev, .swiper-button-next {
-    color: white !important;
-    transition: ease-in-out 200ms;
+  color: white !important;
+  transition: ease-in-out 200ms;
 }
+
 .swiper-button-prev:hover, .swiper-button-next:hover {
-    color: #CCAC00 !important;
+  color: #CCAC00 !important;
 }
