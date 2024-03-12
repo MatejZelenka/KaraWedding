@@ -1,21 +1,41 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth pt-10 scroll-p-10 font-jomolhari">
 
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jomolhari&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite App</title>
 </head>
 
 <body class="bg-silver">
   <header class="container">
-    <nav class="bg-green text-white">
-      <ul class="flex items-center min-h-10 w-1/2 justify-between px-5">
-        <li>Náš příběh</li>
-        <li>Tohle vyplň</li>
-        <li>Praktické informace</li>
-      </ul>
+    <nav class="bg-green text-white fixed w-full z-10 left-0 top-0 start-0">
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="flex items-center min-h-10 px-5 gap-10 justify-center">
+          <li>
+            <a href="#our-story">Náš příběh</a>
+          </li>
+          <li>
+            <a href="#wedding-form">Formular</a>
+          </li>
+          <li>
+            <a href="#practical-info">Praktické informace</a>
+          </li>
+        </ul>
+      </div>
+      <button data-collapse-toggle="navbar-default" type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white md:hidden hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-gray-200 float-right"
+        aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15" />
+        </svg>
+      </button>
     </nav>
   </header>
   <main class="container shadow-3xl">
@@ -26,21 +46,21 @@
       </h1>
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="./images/kara.webp" class="w-full z-0" />
+          <img src="./images/kara.webp" class="w-full z-0 min-h-full" />
         </div>
         <div class="swiper-slide">
-          <img src="./images/kara.webp" class="w-full z-0" />
+          <img src="./images/kara.webp" class="w-full z-0 min-h-full" />
         </div>
         <div class="swiper-slide">
-          <img src="./images/kara.webp" class="w-full z-0" />
+          <img src="./images/kara.webp" class="w-full z-0 min-h-full" />
         </div>
       </div>
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </section>
     <div class="bg-green h-10"></div>
-    <section class="py-8">
-      <h1 class="text-3xl text-center">Druha cast</h1>
+    <section class="py-8" id="our-story">
+      <h1 class="text-3xl text-center">Nas pribeh</h1>
     </section>
     <div class="bg-green py-10">
       <div class="max-w-lg mx-auto grid text-white">
@@ -52,7 +72,7 @@
       </div>
     </div>
 
-    <section class="py-8 min-h-12">
+    <section class="py-8 min-h-12" id="wedding-form">
       <form class="max-w-md mx-auto" name="submit-to-google-sheet">
         <h3>Budete se svatby ucastnit?</h3>
         <div class="grid md:grid-cols-2 md:gap-6">
@@ -142,16 +162,16 @@
       </div>
 
     </section>
-    <div class="bg-green px-3 py-16">
-      <div class="max-w-md md:max-w-4xl mx-auto">
-        <div class="grid grid-cols-1 gap-7 md:grid-cols-2 md:gap-7">
+    <div class="bg-green px-3 py-16" id="practical-info">
+      <div class="max-w-md lg:max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 gap-7 lg:grid-cols-2 md:gap-7">
           <div class="h-auto max-w-full min-h-80">
             <iframe class="rounded-lg"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d329936.3297620718!2d15.566757603384225!3d49.75545087292444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470da30959ad2d81%3A0xf32b20d0839d8eef!2s539%2001%20Hlinsko%20v%20%C4%8Cech%C3%A1ch%201!5e0!3m2!1scs!2scz!4v1709665680032!5m2!1scs!2scz"
               width="100%" height="100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           </div>
-          <div class="text-white">
+          <p class="text-white text-justify-last">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid nihil dolorum maiores voluptatibus
             eius vel facilis, quod aut aliquam impedit voluptatem ipsam doloremque atque odit laudantium explicabo!
             Magni, excepturi nulla. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid nihil dolorum
@@ -162,17 +182,28 @@
             Magni, excepturi nulla. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid nihil dolorum
             maiores voluptatibus eius vel facilis, quod aut aliquam impedit voluptatem ipsam doloremque atque odit
             laudantium explicabo! Magni, excepturi nulla.
-          </div>
+          </p>
         </div>
       </div>
     </div>
 
-    <section class="py-8">
+    <section class="py-8 min-h-96">
+      <div class="grid place-items-center max-w-md mx-auto gap-12">
+        <div>
+          <h3 class="pb-4 text-center">Prakticke informace</h3>
+          <p class="text-justify-last">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error vitae quam doloribus. Nemo ex id,
+            accusantium, ipsum exercitationem eum eos dolores voluptatem earum praesentium rem assumenda distinctio
+            autem aliquam illum?
+          </p>
+        </div>
+        <div>
+          <p>Designed by Jan Varecka</p>
+          <p>Coded by Matej Zelenka</p>
+        </div>
+      </div>
     </section>
   </main>
-  <footer>
-    Tady bude footer
-  </footer>
   <script type="module" src="/main.js"></script>
 </body>
 
