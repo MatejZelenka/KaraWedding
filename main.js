@@ -1,6 +1,7 @@
 import './style.css'
 import {swiper} from "./public/js/slideshow.js";
 import {addLoadingAnimation, resendForm, showAlert} from "./public/js/formUtils.js";
+import { countdown } from './public/js/countdown.js';
 
 swiper();
 
@@ -26,3 +27,8 @@ form.addEventListener('submit', e => {
 })
 
 resendFormButton.addEventListener('click', () => resendForm(form, alerts));
+
+
+const endDate = new Date("Sep 25, 2024 17:00:00").getTime();
+
+setInterval(() => countdown(endDate), 1000);

@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'jomolhari': ['"Jomolhari"', 'sans-serif']
+        'jomolhari': ['"Jomolhari"', 'sans-serif'],
+        'jomhuria' : ['"Jomhuria"', 'sans-serif']
       },
       boxShadow: {
         '3xl': '0px 4px 16px rgba(17,17,26,0.1), 0px 8px 24px rgba(17,17,26,0.1), 0px 16px 56px rgba(17,17,26,0.1)' 
@@ -18,6 +19,9 @@ export default {
         "screen/4": "calc(100vh / 4)",
         "screen/5": "calc(100vh / 5)",
       }),
+      backgroundImage: {
+        'eukaliptus': "url('/images/bg-eukaliptus.png')",
+      }
     },
     container: {
       center: true,

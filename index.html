@@ -7,6 +7,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jomolhari&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite App</title>
 </head>
@@ -39,10 +42,10 @@
     </nav>
   </header>
   <main class="container shadow-3xl">
-    <section class="swiper h-screen/2 flex justify-center items-center">
+    <section class="swiper h-screen/2 flex justify-center items-center font-jomhuria">
       <h1
-        class="text-white text-7xl uppercase text-justify absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <span class="tracking-wider">Anička</span><br><span class="text-5xl">&</span>Honza
+        class="text-white text-9xl uppercase text-justify absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 leading-[0.2]">
+        <span class="tracking-wider">Anička</span><br><span class="text-8xl">&</span>Honza
       </h1>
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -58,11 +61,17 @@
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </section>
-    <div class="bg-green h-10"></div>
-    <section class="py-8" id="our-story">
-      <h1 class="text-3xl text-center">Nas pribeh</h1>
+    <div id="countdown" class="bg-green text-white text-center text-5xl py-5"></div>
+    <section class="relative px-3" id="our-story">
+      <div class="grid place-items-center">
+        <div class="absolute top-[-29.05px] rotate-180 h-[10.75rem] w-full bg-eukaliptus bg-center"></div>
+        <img class="w-[50%]" src="./images/our-story.png" />
+        <div class="bg-gray-400 rounded-full w-12 h-12 absolute top-[19%] left-[25%] -z-10"></div>
+
+        <div class="absolute bottom-[-29.05px] h-[10.75rem] w-full bg-eukaliptus bg-center"></div>
+      </div>
     </section>
-    <div class="bg-green py-10">
+    <div class="bg-green py-10 px-3">
       <div class="max-w-lg mx-auto grid text-white">
         <span class="mb-5 text-justify-last">Proč potřebujeme kolik jich přijede atd a do kdy to potřebujeme
           vyplnit.</span>
@@ -72,18 +81,19 @@
       </div>
     </div>
 
-    <section class="py-8 min-h-12" id="wedding-form">
-      <form class="max-w-md mx-auto" name="submit-to-google-sheet">
+    <section class="py-[10rem] relative" id="wedding-form">
+      <div class="absolute top-[-29.05px] rotate-180 h-[10.75rem] w-full bg-eukaliptus bg-center"></div>
+      <form class="max-w-md mx-auto px-3" name="submit-to-google-sheet">
         <h3>Budete se svatby ucastnit?</h3>
-        <div class="grid md:grid-cols-2 md:gap-6">
+        <div class="grid grid-cols-2">
           <div class="w-full mb-5 group flex items-center">
             <input id="coming" type="radio" value="Yes" name="is-coming" checked
-              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
+              class="w-4 h-4 accent-green-600 focus-visible:outline-yellow-500  focus:ring-yellow-500  focus:ring-2">
             <label for="coming" class="ms-2 text-sm font-medium text-gray-900">Ano</label>
           </div>
           <div class="w-full mb-5 group flex items-center">
             <input id="not-coming" type="radio" value="No" name="is-coming"
-              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
+              class="w-4 h-4  accent-green-600 focus-visible:outline-yellow-500  focus:ring-2">
             <label for="not-coming" class="ms-2 text-sm font-medium text-gray-900">Ne</label>
           </div>
         </div>
@@ -124,10 +134,10 @@
               placeholder="Zanechte kratky dotaz..." name="additional-comment"></textarea>
           </div>
         </div>
-        <div class="grid">
+        <div class="grid grid-cols-2">
           <button type="submit"
-            class="text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-fuFll text-sm px-5 py-2.5 text-center rounded-md">
-            <svg aria-hidden="true" class="w-5 h-5 text-gray-200 animate-spin fill-yellow-400 mr-1 hidden"
+            class="col-start-2 flex justify-center items-center text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-fuFll text-sm px-5 py-2.5 text-center rounded-md">
+            <svg aria-hidden="true" class="w-5 h-5 text-gray-200 animate-spin fill-yellow-400 mr-3 hidden"
               viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
@@ -160,7 +170,7 @@
           Znovu odeslat
         </button>
       </div>
-
+      <div class="absolute bottom-[-29.05px] h-[10.75rem] w-full bg-eukaliptus bg-center"></div>
     </section>
     <div class="bg-green px-3 py-16" id="practical-info">
       <div class="max-w-md lg:max-w-4xl mx-auto">
@@ -187,8 +197,9 @@
       </div>
     </div>
 
-    <section class="py-8 min-h-96">
-      <div class="grid place-items-center max-w-md mx-auto gap-12">
+    <section class="py-[10rem] relative">
+      <div class="absolute top-[-29.05px] rotate-180 h-[10.75rem] w-full bg-eukaliptus bg-center"></div>
+      <div class="grid place-items-center max-w-md mx-auto gap-12 px-3">
         <div>
           <h3 class="pb-4 text-center">Prakticke informace</h3>
           <p class="text-justify-last">
@@ -202,6 +213,7 @@
           <p>Coded by Matej Zelenka</p>
         </div>
       </div>
+      <div class="absolute bottom-[-29.05px] h-[10.75rem] w-full bg-eukaliptus bg-center"></div>
     </section>
   </main>
   <script type="module" src="/main.js"></script>
