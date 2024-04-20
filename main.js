@@ -1,18 +1,8 @@
-import "./style.css";
-import { swiper } from "./public/js/slideshow.js";
-import {
-  addLoadingAnimation,
-  resendForm,
-  showAlert,
-} from "./public/js/formUtils.js";
-import { countdownInit } from "./public/js/countdown.js";
-import { toggleMenuMobile } from "./public/js/mobileMenu.js";
+import "/style.css";
+import { countdownInit } from "public/js/countdown.js?url";
+import "add-to-calendar-button";
 
 countdownInit();
-swiper();
-document
-  .querySelector("button[data-collapse-toggle]")
-  .addEventListener("click", () => toggleMenuMobile());
 
 //url used from Google sheet app
 const scriptURL =

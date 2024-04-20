@@ -4,9 +4,9 @@ export const countdownInit = () => {
   const timeInterval = setInterval(function () {
     let dateNow = new Date().getTime();
     let timeRemaining = countdownDate - dateNow;
-    countdownDiv.innerHTML = `${getDays(timeRemaining)} ${getHours(
+    countdownDiv.innerHTML = `${getDays(timeRemaining)} <br> ${getHours(
       timeRemaining
-    )} ${getMinutes(timeRemaining)} ${getSeconds(timeRemaining)}`;
+    )} <br> ${getMinutes(timeRemaining)} <br> ${getSeconds(timeRemaining)}`;
     timeRemaining < 0 ?? clearInterval(timeInterval);
   }, 1000);
 };
