@@ -1,6 +1,7 @@
 import "/style.css";
-import { countdownInit } from "public/js/countdown.js?url";
 import "add-to-calendar-button";
+import {addLoadingAnimation, resendForm, showAlert} from "/js/formUtils.js?url";
+import {countdownInit} from "/js/countdown.js?url";
 
 countdownInit();
 
