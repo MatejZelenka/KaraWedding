@@ -7,9 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        jomolhari: ['"Jomolhari"', "sans-serif"],
-        jomhuria: ['"Jomhuria"', "sans-serif"],
-        cormorantGaramond: ["Cormorant Garamond"],
+        montserrat: ['"Montserrat"', "sans-serif"],
       },
       boxShadow: {
         "3xl":

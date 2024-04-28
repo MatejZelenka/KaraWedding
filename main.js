@@ -1,40 +1,39 @@
 import "/style.css";
 import "add-to-calendar-button";
 
-
 const addLoadingAnimation = (form) => {
-  const spinner = form.querySelector('svg');
-  const inputs = [...form.querySelectorAll('input')].concat([form.querySelector('textarea')]);
-  spinner.classList.remove('hidden');
-  spinner.classList.add('inline');
-  inputs.length >= 0 && inputs.forEach(item => item.disabled = true);
-}
+  const spinner = form.querySelector("svg");
+  const inputs = [...form.querySelectorAll("input")].concat([
+    form.querySelector("textarea"),
+  ]);
+  spinner.classList.remove("hidden");
+  spinner.classList.add("inline");
+  inputs.length >= 0 && inputs.forEach((item) => (item.disabled = true));
+};
 
 const showAlert = (isSuccesfullRequest, form, alerts) => {
-  form.classList.add('hidden');
-  alerts.classList.remove('hidden');
-  alerts.classList.add('grid');
+  form.classList.add("hidden");
+  alerts.classList.remove("hidden");
+  alerts.classList.add("grid");
   if (isSuccesfullRequest) {
-    alerts.querySelector('#alert-success').classList.remove('hidden');
+    alerts.querySelector("#alert-success").classList.remove("hidden");
   } else {
-    alerts.querySelector('#alert-failure').classList.remove('hidden');
+    alerts.querySelector("#alert-failure").classList.remove("hidden");
   }
-}
-
+};
 
 const resendForm = (form, alerts) => {
-  const spinner = form.querySelector('svg');
+  const spinner = form.querySelector("svg");
 
-  if (form.classList.contains('hidden')) {
-    form.classList.remove('hidden');
-    form.classList.add('grid');
-    alerts.classList.remove('grid');
-    alerts.classList.add('hidden');
-    spinner.classList.remove('inline');
-    spinner.classList.add('hidden');
+  if (form.classList.contains("hidden")) {
+    form.classList.remove("hidden");
+    form.classList.add("grid");
+    alerts.classList.remove("grid");
+    alerts.classList.add("hidden");
+    spinner.classList.remove("inline");
+    spinner.classList.add("hidden");
   }
-}
-
+};
 
 //url used from Google sheet app
 const scriptURL =
@@ -47,7 +46,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   addLoadingAnimation(form);
 
-  fetch(scriptURL, {method: "POST", body: new FormData(form)})
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
     .then((response) => {
       console.log("Success!", response);
       showAlert(true, form, alerts);
@@ -60,7 +59,6 @@ form.addEventListener("submit", (e) => {
 
 resendFormButton.addEventListener("click", () => resendForm(form, alerts));
 
-
 const countdownInit = () => {
   const countdownDiv = document.querySelector("#countdown");
   const countdownDate = new Date("Sep 25, 2024 17:00:00").getTime();
@@ -71,7 +69,7 @@ const countdownInit = () => {
       timeRemaining
     )}  ${getMinutes(timeRemaining)}  ${getSeconds(timeRemaining)}`;
     if (timeRemaining > 0) {
-      clearInterval(timeInterval)
+      clearInterval(timeInterval);
     }
   }, 1000);
 };
