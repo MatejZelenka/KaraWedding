@@ -104,3 +104,8 @@ const getUnitInflection = (count, five, two, one) => {
 };
 
 countdownInit();
+document
+  .querySelector("#menuButton")
+  .addEventListener("click", () =>
+    document.querySelector("#menu").classList.toggle("hidden")
+  );

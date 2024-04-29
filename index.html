@@ -14,6 +14,28 @@
 
 <body class="font-montserrat">
   <main class="grid lg:grid-cols-3 md:grid-rows-1 sm:grid-rows-1 grid-rows-1">
+    <button id="menuButton" class="fixed top-0 left-0 bg-white z-10 p-4 rounded-[40px] m-4 font-semibold hover:bg-gray-100 hover:cursor-pointer">
+      Menu
+    </button>
+    <div id="menu" class="hidden bg-white fixed top-[4.25rem] left-0 z-10 py-5 m-4 rounded-[20px]">
+      <ul class="flex flex-col gap-4 text-xl font-semibold">
+        <li class="list-none">
+          <a class="hover:bg-gray-100 hover:cursor-pointer py-2 px-5">
+            Odkaz 1
+          </a>
+        </li>
+        <li>
+          <a class="hover:bg-gray-100 hover:cursor-pointer py-2 px-5">
+            Odkaz 2
+          </a>
+        </li>
+        <li>
+          <a class="hover:bg-gray-100 hover:cursor-pointer py-2 px-5">
+            Odkaz 3
+          </a>
+        </li>
+      </ul>
+    </div>
     <div class="md:col-span-2">
       <div class="overflow-hidden sticky top-0 w-full lg:h-[100vh] md:h-[50vh] sm:h-[50vh] h-[50vh]">
         <img src="/images/kara.webp" class="w-[100%] h-[100%] object-cover object-center" />
