@@ -11,11 +11,11 @@ const addLoadingAnimation = (form) => {
   inputs.length >= 0 && inputs.forEach((item) => (item.disabled = true));
 };
 
-const showAlert = (isSuccesfullRequest, form, alerts) => {
+const showAlert = (isSuccessfulRequest, form, alerts) => {
   form.classList.add("hidden");
   alerts.classList.remove("hidden");
   alerts.classList.add("grid");
-  if (isSuccesfullRequest) {
+  if (isSuccessfulRequest) {
     alerts.querySelector("#alert-success").classList.remove("hidden");
   } else {
     alerts.querySelector("#alert-failure").classList.remove("hidden");
