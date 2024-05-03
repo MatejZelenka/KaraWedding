@@ -68,9 +68,7 @@ const countdownInit = () => {
     countdownDiv.innerHTML = `${getDays(timeRemaining)}  ${getHours(
       timeRemaining
     )}  ${getMinutes(timeRemaining)}  ${getSeconds(timeRemaining)}`;
-    if (timeRemaining > 0) {
-      clearInterval(timeInterval);
-    }
+    timeRemaining < 0 && clearInterval(timeInterval);
   }, 1000);
 };
 
