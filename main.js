@@ -1,5 +1,6 @@
 import "/style.css";
 import "add-to-calendar-button";
+import "@fortawesome/fontawesome-free/js/all.js";
 
 const addLoadingAnimation = (form) => {
   const spinner = form.querySelector("svg");
@@ -61,7 +62,7 @@ resendFormButton.addEventListener("click", () => resendForm(form, alerts));
 
 const countdownInit = () => {
   const countdownDiv = document.querySelector("#countdown");
-  const countdownDate = new Date("Sep 25, 2024 17:00:00").getTime();
+  const countdownDate = new Date("Sep 14, 2024 17:00:00").getTime();
   const timeInterval = setInterval(function () {
     let dateNow = new Date().getTime();
     let timeRemaining = countdownDate - dateNow;
@@ -102,8 +103,3 @@ const getUnitInflection = (count, five, two, one) => {
 };
 
 countdownInit();
-document
-  .querySelector("#menuButton")
-  .addEventListener("click", () =>
-    document.querySelector("#menu").classList.toggle("hidden")
-  );

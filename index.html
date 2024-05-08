@@ -6,56 +6,33 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite App</title>
 </head>
 
-<body class="font-montserrat">
-  <main class="grid lg:grid-cols-3 md:grid-rows-1 sm:grid-rows-1 grid-rows-1">
-    <button id="menuButton" class="fixed top-0 left-0 bg-white z-10 p-4 rounded-[40px] m-4 font-semibold hover:bg-gray-100 hover:cursor-pointer">
-      Menu
-    </button>
-    <div id="menu" class="hidden bg-white fixed top-[4.25rem] left-0 z-10 py-5 m-4 rounded-[20px]">
-      <ul class="flex flex-col gap-4 text-xl font-semibold">
-        <li class="list-none">
-          <a class="hover:bg-gray-100 hover:cursor-pointer py-2 px-5">
-            Odkaz 1
-          </a>
-        </li>
-        <li>
-          <a class="hover:bg-gray-100 hover:cursor-pointer py-2 px-5">
-            Odkaz 2
-          </a>
-        </li>
-        <li>
-          <a class="hover:bg-gray-100 hover:cursor-pointer py-2 px-5">
-            Odkaz 3
-          </a>
-        </li>
-      </ul>
-    </div>
+<body class="font-opensans">
+  <main class="grid lg:grid-cols-3 md:grid-rows-1 sm:grid-rows-1 grid-rows-1 bg-slate">
     <div class="md:col-span-2">
       <div class="overflow-hidden sticky top-0 w-full lg:h-[100vh] md:h-[50vh] sm:h-[50vh] h-[50vh]">
-        <img src="/images/kara.webp" class="w-[100%] h-[100%] object-cover object-center" />
+        <img src="/images/venku.jpg" class="w-[100%] h-[100%] object-cover object-top" />
       </div>
     </div>
     <div class="flex flex-col justify-center items-center text-center lg:px-8 px-4 w-[80%] mx-auto">
       <div
         class="flex flex-col justify-center items-center text-center lg:h-[100vh] md:h-[50vh] sm:h-[50vh] h-[50vh] w-1/2 gap-7">
         <h2
-          class="xl:text-7xl lg:text-6xl min-[900px]:text-5xl md:text-5xl sm:text-5xl text-4xl leading-[1.25] uppercase">
+          class="xl:text-7xl lg:text-6xl min-[900px]:text-5xl md:text-5xl sm:text-5xl text-4xl xl:leading-[1.25] lg:leading-[1.25] min-[900px]:leading-[1.25] md:leading-[1.25] sm:leading-[1.25] leading-[1.25] uppercase">
           Anička Zelenková</h2>
         <div>a</div>
         <h2
-          class="xl:text-7xl lg:text-6xl min-[900px]:text-5xl md:text-5xl sm:text-5xl text-4xl leading-[1.25] uppercase">
+          class="xl:text-7xl lg:text-6xl min-[900px]:text-5xl md:text-5xl sm:text-5xl text-4xl xl:leading-[1.25] lg:leading-[1.25] min-[900px]:leading-[1.25] md:leading-[1.25] sm:leading-[1.25] leading-[1.25] uppercase">
           Jan Vařečka</h2>
       </div>
       <div>
         <div class="mt-32 flex gap-9 flex-col">
           <div>
-            Zari 25, 2024
+            14. 9. 2024
           </div>
           <div>
             Nekde, nejaky kraj
@@ -63,7 +40,7 @@
           <div id="countdown"></div>
         </div>
         <div class="mt-20">
-          <a class="block mx-auto text-white bg-green-500 hover:bg-green-700 font-semibold rounded-lg text-base px-5 py-3 w-[185px]"
+          <a class="block mx-auto text-slate bg-stone-500 hover:bg-stone-700 font-semibold rounded-lg text-base px-5 py-3 w-[185px]"
             href="#form">
             RSVP
           </a>
@@ -71,6 +48,9 @@
         <div class="mt-10">
           <div class="flex flex-col justify-center items-center gap-6">
             <h2 class="text-[32px]">Jak jsme se potkali</h2>
+            <div class="-my-4">
+              <i class="fa-regular fa-heart text-2xl"></i>
+            </div>
             <i>20. 8. 2024</i>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum maiores nihil, temporibus perferendis
@@ -83,9 +63,16 @@
               libero quod quia.
             </p>
           </div>
+          <div class="mt-12">
+            <img class="w-full rounded-2xl" src="/images/most.jpg" />
+          </div>
           <div class="flex flex-col justify-center items-center gap-6 mt-12">
             <h2 class="text-[32px]">Zasnuby</h2>
-            <i>20. 8. 2024</i>
+            <div class="w-[5rem] -my-7">
+              <svg viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" style="color: rgb(0, 0, 0);"><g id="2_wedding_compound_path" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(15.000000, 24.000000)" fill="currentColor" fill-rule="nonzero" id="Shape"><path d="M38.7835616,3.75 C37.7226303,2.06794594 35.9975187,0.931758426 34.0504935,0.63272183 C32.1034683,0.333685233 30.123859,0.900877982 28.6191781,2.18888889 C26.1239185,0.046173077 22.4794493,0.00187866083 19.9342466,2.08333333 C17.3890439,0.00187866083 13.7445747,0.046173077 11.2493151,2.18888889 C9.00759192,0.278560224 5.81550157,0.025972582 3.30860308,1.56054649 C0.801704594,3.0951204 -0.464444302,6.07677651 0.15890411,8.97777778 C0.630136986,11.3888889 5.02465753,16.6333333 11.1123288,19.7222222 L11.2493151,19.7944444 L11.3863014,19.7222222 C14.6323011,18.0641668 17.5341398,15.7896647 19.9342466,13.0222222 C22.332551,15.7893011 25.232528,18.063802 28.4767123,19.7222222 L28.6136986,19.7944444 L28.7561644,19.7222222 C34.8438356,16.6388889 39.2383562,11.3888889 39.7150685,8.98333333 C40.1066873,7.18276937 39.7712415,5.29818875 38.7835616,3.75 Z M11.2493151,19.0888889 C5.40273973,16.0833333 1.2109589,11.1166667 0.761643836,8.85 C0.408140766,7.21152091 0.711268394,5.4977698 1.60430787,4.08594586 C2.49734735,2.67412193 3.90710379,1.67994043 5.52328767,1.32222222 C5.95522389,1.22613421 6.39614516,1.17770432 6.83835616,1.17777778 C8.396658,1.18368621 9.89692195,1.77786627 11.0465753,2.84444444 L11.2547945,3.03333333 L11.4630137,2.84444444 C13.6896847,0.766175918 17.07058,0.62060959 19.4630137,2.5 C19.0788115,2.87369746 18.7386406,3.29130068 18.4493151,3.74444444 C17.4644144,5.29171547 17.1309637,7.17417158 17.5232877,8.97222222 C17.6986301,9.86111111 18.4109589,11.1388889 19.539726,12.55 C17.2109396,15.2436943 14.3973082,17.4628874 11.2493151,19.0888889 L11.2493151,19.0888889 Z M20.8931507,4.08888889 C21.7894295,5.50042901 22.0913233,7.21691546 21.7315068,8.85555556 C21.3658775,10.0484615 20.7510092,11.1474788 19.9287671,12.0777778 C19.1061255,11.1456527 18.4912565,10.0447392 18.1260274,8.85 C17.7687265,7.21239463 18.0725913,5.49792066 18.969863,4.08888889 C19.2436642,3.6602523 19.5674644,3.26666848 19.9342466,2.91666667 C20.3006463,3.26497888 20.6244292,3.65667654 20.8986301,4.08333333 L20.8931507,4.08888889 Z M39.1013699,8.85555556 C38.6575342,11.1166667 34.4657534,16.0777778 28.6136986,19.0888889 C25.4659544,17.4648807 22.6522953,15.2475512 20.3232877,12.5555556 C21.4520548,11.1444444 22.1643836,9.86666667 22.339726,8.98333333 C22.7329547,7.1835087 22.3994921,5.29898427 21.4136986,3.75 C21.1264291,3.29520782 20.7880947,2.87573762 20.4054795,2.5 C21.1375201,1.92393104 21.9875649,1.52148079 22.8931507,1.32222222 C23.3232976,1.22653172 23.7623606,1.17810415 24.2027397,1.17777778 C25.7610416,1.18368621 27.2613055,1.77786627 28.4109589,2.84444444 L28.6191781,3.03333333 L28.8273973,2.84444444 C30.8303846,0.993874407 33.784067,0.669774842 36.1311698,2.04302126 C38.4782727,3.41626768 39.6794365,6.17129081 39.1013699,8.85555556 Z" stroke="currentColor" stroke-width="0.3"></path></g></g></svg>
+            </div>
+            <i class="fa-solid fa-champagne-glasses"></i>
+            <b>20. 8. 2024</b>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum maiores nihil, temporibus perferendis
               dignissimos recusandae ab officia repudiandae. Distinctio eos neque ut veniam aspernatur ab sint ducimus
@@ -94,9 +81,8 @@
           </div>
         </div>
         <div class="mt-12">
-          <img class="w-full rounded-2xl" src="/images/kara.webp" />
+          <img class="w-full rounded-2xl" src="/images/bar.jpg" />
         </div>
-
         <div class="flex flex-col justify-center items-center gap-6 mt-12">
           <h2 class="text-[32px]">
             Program
@@ -108,7 +94,7 @@
           </p>
           <h3 class="text-[26px]">Datum svatby</h3>
           <div class="flex flex-col justify-center gap-2">Tady se neco doplni
-            <a class="block mx-auto text-white bg-green-500 hover:bg-green-700 font-semibold rounded-lg text-base px-5 py-3 w-[185px]"
+            <a class="block mx-auto text-slate bg-stone-500 hover:bg-stone-700 font-semibold rounded-lg text-base px-5 py-3 w-[185px]"
               href="https://maps.app.goo.gl/3NJ6rAYHEkgvanXu7" target="_blank">
               Mapa mista
             </a>
@@ -117,7 +103,7 @@
                 description="A nice description does not hurt" startDate="2022-02-21" endDate="2022-03-24"
                 startTime="10:13" endTime="17:57" location="Somewhere over the rainbow" options="['Apple','Google']"
                 timeZone="Europe/Prague" trigger="click" inline listStyle="modal" iCalFileName="Reminder-Event"
-                styleLight="--btn-background: #00893f; --btn-text: #fff; --btn-hover-background: #005726; --btn-hover-text: #fff; --btn-border-radius: 8px; --btn-border: #fff; --btn-shadow: none; --btn-hover-shadow: none; --btn-active-shadow: none"></add-to-calendar-button>
+                styleLight="--btn-background: #494745; --btn-text: #fff; --btn-hover-background: #3c3a38; --btn-hover-text: #fff; --btn-border-radius: 8px; --btn-border: #fff; --btn-shadow: none; --btn-hover-shadow: none; --btn-active-shadow: none"></add-to-calendar-button>
             </div>
           </div>
         </div>
@@ -127,7 +113,7 @@
           <h2 class="text-[32px]">
             RSVP
           </h2>
-          <form class="sm:min-w-96 w-full px-[2rem] py-[3rem] bg-gray-100 rounded-2xl" name="submit-to-google-sheet">
+          <form class="sm:min-w-96 w-full px-[2rem] py-[3rem] bg-slate-100 rounded-2xl shadow-xl" name="submit-to-google-sheet">
             <h3 class="text-lg font-bold">Vyplnte Vase udaje</h3>
             <div class="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-2 grid-cols-1 lg:gap-6 md:gap-0 sm:gap-6 gap-0">
               <div class="w-full mb-5 group">
@@ -167,7 +153,7 @@
             </div>
             <div class="flex justify-center">
               <button type="submit"
-                class="flex justify-center items-center text-white bg-green-500 hover:bg-green-700 font-semibold rounded-lg text-base px-5 py-3 w-[185px] text-center rounded-md">
+                class="flex justify-center items-center text-slate bg-stone-500 hover:bg-stone-700 font-semibold rounded-lg text-base px-5 py-3 w-[185px] text-center rounded-md">
                 <svg aria-hidden="true" class="w-5 h-5 text-gray-200 animate-spin fill-neutral-900 mr-3 hidden"
                   viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -205,15 +191,6 @@
         </div>
 
       </div>
-      <a class="spotlight" href="/images/kara.webp">
-        <img src="/images/kara.webp">
-      </a>
-      <a class="spotlight" href="/images/kara.webp">
-        <img src="/images/kara.webp">
-      </a>
-      <a class="spotlight" href="/images/kara.webp">
-        <img src="/images/kara.webp">
-      </a>
     </div>
   </main>
 
@@ -221,3 +198,28 @@
 </body>
 
 </html>
+
+<template>
+  <button id="menuButton" class="fixed top-0 left-0 bg-white z-10 p-4 rounded-[40px] m-4 font-semibold hover:bg-gray-100 hover:cursor-pointer">
+    Menu
+  </button>
+  <div id="menu" class="hidden bg-white fixed top-[4.25rem] left-0 z-10 py-5 m-4 rounded-[20px]">
+    <ul class="flex flex-col gap-4 text-xl font-semibold">
+      <li class="list-none">
+        <a class="hover:bg-gray-100 hover:cursor-pointer py-2 px-5">
+          Odkaz 1
+        </a>
+      </li>
+      <li>
+        <a class="hover:bg-gray-100 hover:cursor-pointer py-2 px-5">
+          Odkaz 2
+        </a>
+      </li>
+      <li>
+        <a class="hover:bg-gray-100 hover:cursor-pointer py-2 px-5">
+          Odkaz 3
+        </a>
+      </li>
+    </ul>
+  </div>
+</template>
