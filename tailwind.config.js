@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-import tailwindcss from "tailwindcss";
 import colors from "tailwindcss/colors.js";
 
 export default {
@@ -84,5 +83,5 @@ export default {
   variants: {
     extend: {},
   },
-  plugins: [require("tailwind-fontawesome")],
+  plugins: [],
 };
