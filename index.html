@@ -165,12 +165,12 @@
                 Budete chtít zajistit ubytování?
               </h4>
               <div class="w-full mb-5 group flex items-center">
-                <input id="coming" type="radio" value="Yes" name="ubytovani" checked class="w-4 h-4 accent-gray-600">
-                <label for="coming" class="ms-2 text-sm font-medium text-gray-900">Ano</label>
+                <input id="ubytovani-yes" type="radio" value="Ano" name="ubytovani" checked class="w-4 h-4 accent-gray-600">
+                <label for="ubytovani-yes" class="ms-2 text-sm font-medium text-gray-900">Ano</label>
               </div>
               <div class="w-full mb-5 group flex items-center">
-                <input id="coming" type="radio" value="Yes" name="ubytovani" class="w-4 h-4 accent-gray-600">
-                <label for="coming" class="ms-2 text-sm font-medium text-gray-900">Ne</label>
+                <input id="ubytovani-no" type="radio" value="Ne" name="ubytovani" class="w-4 h-4 accent-gray-600">
+                <label for="ubytovani-no" class="ms-2 text-sm font-medium text-gray-900">Ne</label>
               </div>
             </div>
             <div>
@@ -178,16 +178,16 @@
                 Pokud budete chtít zajistit ubytování, budete chtít ubytování pouze na sobotu, nebo i pátek?
               </h4>
               <div class="w-full mb-5 group flex items-center">
-                <input id="coming" type="radio" value="Yes" name="ubytovani" checked class="w-4 h-4 accent-gray-600">
-                <label for="coming" class="ms-2 text-sm font-medium text-gray-900">Pouze sobota</label>
+                <input id="day-saturday" type="radio" value="Sobota" name="denUbytovani" checked class="w-4 h-4 accent-gray-600">
+                <label for="day-saturday" class="ms-2 text-sm font-medium text-gray-900">Pouze sobota</label>
               </div>
               <div class="w-full mb-5 group flex items-center">
-                <input id="coming" type="radio" value="Yes" name="ubytovani" class="w-4 h-4 accent-gray-600">
-                <label for="coming" class="ms-2 text-sm font-medium text-gray-900">Sobota i pátek</label>
+                <input id="both-days" type="radio" value="Sobota/Pátek" name="denUbytovani" class="w-4 h-4 accent-gray-600">
+                <label for="both-days" class="ms-2 text-sm font-medium text-gray-900">Sobota i pátek</label>
               </div>
               <div class="w-full mb-5 group flex items-center">
-                <input id="coming" type="radio" value="Yes" name="ubytovani" class="w-4 h-4 accent-gray-600">
-                <label for="coming" class="ms-2 text-sm font-medium text-gray-900">Pouze pátek</label>
+                <input id="day-friday" type="radio" value="Pátek" name="denUbytovani" class="w-4 h-4 accent-gray-600">
+                <label for="day-friday" class="ms-2 text-sm font-medium text-gray-900">Pouze pátek</label>
               </div>
             </div>
             <div>
@@ -195,23 +195,23 @@
                 Budete chtít pokoj v hotelu, nebo chatku?
               </h4>
               <div class="w-full mb-5 group flex items-center">
-                <input id="coming" type="radio" value="Yes" name="ubytovani" checked class="w-4 h-4 accent-gray-600">
-                <label for="coming" class="ms-2 text-sm font-medium text-gray-900">Pokoj v hotelu</label>
+                <input id="hotel-room" type="radio" value="Pokoj v hotelu" name="typUbytovani" checked class="w-4 h-4 accent-gray-600">
+                <label for="hotel-room" class="ms-2 text-sm font-medium text-gray-900">Pokoj v hotelu</label>
               </div>
               <div class="w-full mb-5 group flex items-center">
-                <input id="coming" type="radio" value="Yes" name="ubytovani" class="w-4 h-4 accent-gray-600">
-                <label for="coming" class="ms-2 text-sm font-medium text-gray-900">Chatka</label>
+                <input id="cottage" type="radio" value="Chatka" name="typUbytovani" class="w-4 h-4 accent-gray-600">
+                <label for="cottage" class="ms-2 text-sm font-medium text-gray-900">Chatka</label>
               </div>
             </div>
             <div>
               <div class="w-full mb-5 group">
-                <label for="message" class="block mb-2 text-sm font-bold text-gray-900 text-left">Pro kolik lidí
+                <label for="accomodation-message" class="block mb-2 text-sm font-bold text-gray-900 text-left">Pro kolik lidí
                   budete chtít pokoj v hotelu? Dejte nám, prosím, vědět, kolik z těch lidí bude dospělých a kolik dětí.
                   Děkujeme!</label>
-                <textarea id="message" rows="4"
+                <textarea id="accomodation-message" rows="4"
                   class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-md"
                   placeholder="Nechci pokoj v hotelu, ale chatku" default-value="Nechci pokoj v hotelu, ale chatku"
-                  name="additional-comment"></textarea>
+                  name="komentarUbytovani"></textarea>
               </div>
             </div>
             <div>
@@ -219,26 +219,26 @@
                 Strávíte s námi celý den, nebo máte v plánu odjet po obřadu, po obědě?
               </h4>
               <div class="w-full mb-5 group flex items-center">
-                <input id="coming" type="radio" value="Yes" name="ubytovani" checked class="w-4 h-4 accent-gray-600">
-                <label for="coming" class="ms-2 text-sm font-medium text-gray-900">Celý den</label>
+                <input id="whole-day" type="radio" value="Celý den" name="casNaSvatbe" checked class="w-4 h-4 accent-gray-600">
+                <label for="whole-day" class="ms-2 text-sm font-medium text-gray-900">Celý den</label>
               </div>
               <div class="w-full mb-5 group flex items-center">
-                <input id="coming" type="radio" value="Yes" name="ubytovani" class="w-4 h-4 accent-gray-600">
-                <label for="coming" class="ms-2 text-sm font-medium text-gray-900">Odjedu po obřadu</label>
+                <input id="after-ceremony" type="radio" value="Odjedu po obřadu" name="casNaSvatbe" class="w-4 h-4 accent-gray-600">
+                <label for="after-ceremony" class="ms-2 text-sm font-medium text-gray-900">Odjedu po obřadu</label>
               </div>
               <div class="w-full mb-5 group flex items-center">
-                <input id="coming" type="radio" value="Yes" name="ubytovani" class="w-4 h-4 accent-gray-600">
-                <label for="coming" class="ms-2 text-sm font-medium text-gray-900">Odjedu po obědě</label>
+                <input id="after-lunch" type="radio" value="Odjedu po obědě" name="casNaSvatbe" class="w-4 h-4 accent-gray-600">
+                <label for="after-lunch" class="ms-2 text-sm font-medium text-gray-900">Odjedu po obědě</label>
               </div>
             </div>
             <div>
               <div class="w-full mb-5 group">
-                <label for="message" class="block mb-2 text-sm font-bold text-gray-900 text-left">Máte nějaké
+                <label for="allergies" class="block mb-2 text-sm font-bold text-gray-900 text-left">Máte nějaké
                   stravovací preference, nebo je něco důležitého, co bychom měli vědět?</label>
-                <textarea id="message" rows="4"
+                <textarea id="allergies" rows="4"
                   class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-md"
                   placeholder="Jím všechno a nemám žádné potravinové alergie"
-                  default-value="Jím všechno a nemám žádné potravinové alergie" name="additional-comment"></textarea>
+                  default-value="Jím všechno a nemám žádné potravinové alergie" name="alergie"></textarea>
               </div>
             </div>
             <div class="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-2 grid-cols-1 lg:gap-6 md:gap-0 sm:gap-6 gap-0">
@@ -246,13 +246,13 @@
                 <label for="name" class="block mb-2 text-sm font-bold text-green text-left">Jméno</label>
                 <input type="text" id="name"
                   class="bg-gray-50 text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md" placeholder="Joe"
-                  name="name" required>
+                  name="jmeno" required>
               </div>
               <div class="w-full mb-5 group">
                 <label for="surname" class="block mb-2 text-sm font-bold text-green text-left">Přijmení</label>
                 <input type="text" id="surname"
                   class="bg-gray-50  text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md" placeholder="Doe"
-                  name="surname" required>
+                  name="prijmeni" required>
               </div>
             </div>
             <div class="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-2 grid-cols-1 lg:gap-6 md:gap-0 sm:gap-6 gap-0">
@@ -260,22 +260,13 @@
                 <label for="phone" class="block mb-2 text-sm font-bold text-green text-left">Telefon</label>
                 <input type="text" id="phone"
                   class="bg-gray-50  text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md"
-                  placeholder="123456789" name="phone" inputmode="numeric" required>
+                  placeholder="123456789" name="telefon" inputmode="numeric" required>
               </div>
               <div class="w-full mb-5 group">
-                <label for="email" class="block mb-2 text-sm font-bold text-green text-left">E-mail</label>
-                <input type="text" id="email"
+                <label for="e-mail" class="block mb-2 text-sm font-bold text-green text-left">E-mail</label>
+                <input type="email" id="e-mail"
                   class="bg-gray-50 text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md"
-                  placeholder="vas-email@seznam.cz" name="e-mail" required>
-              </div>
-            </div>
-            <div class="grid">
-              <div class="w-full mb-5 group">
-                <label for="message" class="block mb-2 text-sm font-bold text-gray-900 text-left">Máte nějký další
-                  dotaz?</label>
-                <textarea id="message" rows="4"
-                  class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-md"
-                  placeholder="Zanechte kratky dotaz..." name="additional-comment"></textarea>
+                  placeholder="vas-email@seznam.cz" name="email" required>
               </div>
             </div>
             <div class="flex justify-center">
@@ -297,7 +288,7 @@
             </div>
           </form>
 
-          <div id="alerts-menu" class="max-w-md mx-auto hidden">
+          <div id="alerts-menu" class="max-w-md mx-auto hidden min-h-40">
             <div id="alert-success"
               class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative my-8 text-center hidden"
               role="alert">

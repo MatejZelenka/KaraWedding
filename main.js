@@ -38,13 +38,14 @@ const resendForm = (form, alerts) => {
 
 //url used from Google sheet app
 const scriptURL =
-  "https://script.google.com/macros/s/AKfycbzbDfFWxtlIoHcN_RTPxITDw6ilWTOcB4Qp85QOZeWMvtAcgkBET4oy3fQlHVwM-B2cqw/exec";
+  "https://script.google.com/macros/s/AKfycbzdvq2PZsd3W6Mw8XZRFQTpA8FweHGrhHQ-_bo4eFuRKntc4bh_2XuDy8y_fSD7r6-BGQ/exec";
 const form = document.forms["submit-to-google-sheet"];
 const alerts = document.querySelector("#alerts-menu");
 const resendFormButton = alerts.querySelector("#new-form");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  console.log([...new FormData(form).entries()]);
   addLoadingAnimation(form);
 
   fetch(scriptURL, { method: "POST", body: new FormData(form) })
