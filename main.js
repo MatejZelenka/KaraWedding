@@ -4,12 +4,8 @@ import "@fortawesome/fontawesome-free/js/all.js";
 
 const addLoadingAnimation = (form) => {
   const spinner = form.querySelector("svg");
-  const inputs = [...form.querySelectorAll("input")].concat([
-    form.querySelector("textarea"),
-  ]);
   spinner.classList.remove("hidden");
   spinner.classList.add("inline");
-  inputs.length >= 0 && inputs.forEach((item) => (item.disabled = true));
 };
 
 const showAlert = (isSuccessfulRequest, form, alerts) => {
@@ -45,7 +41,6 @@ const resendFormButton = alerts.querySelector("#new-form");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log([...new FormData(form).entries()]);
   addLoadingAnimation(form);
 
   fetch(scriptURL, { method: "POST", body: new FormData(form) })

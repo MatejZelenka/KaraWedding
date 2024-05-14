@@ -6,8 +6,7 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anička a Honza</title>
   <link rel="shortcut icon" type="image/jpg" href="/favicon/favicon.ico" />
@@ -22,14 +21,16 @@
     </div>
     <div class="flex flex-col justify-center items-center text-center lg:px-8 w-[80%] mx-auto">
       <div
-        class="flex flex-col justify-center items-center text-center lg:h-[100vh] md:h-[50vh] sm:h-[50vh] h-[50vh] w-1/2 gap-7">
-        <h2
+      class="flex flex-col justify-center items-center text-center lg:h-[100vh] md:h-[50vh] sm:h-[50vh] h-[50vh]  gap-7 font-tinos">
+      <img src="/images/euka.png" class="rotate-180">
+      <h2
           class="xl:text-7xl lg:text-6xl min-[900px]:text-5xl md:text-5xl sm:text-5xl text-4xl xl:leading-[1.25] lg:leading-[1.25] min-[900px]:leading-[1.25] md:leading-[1.25] sm:leading-[1.25] leading-[1.25] uppercase">
           Anička Zelenková</h2>
-        <div>a</div>
+        <div class="text-2xl">+</div>
         <h2
           class="xl:text-7xl lg:text-6xl min-[900px]:text-5xl md:text-5xl sm:text-5xl text-4xl xl:leading-[1.25] lg:leading-[1.25] min-[900px]:leading-[1.25] md:leading-[1.25] sm:leading-[1.25] leading-[1.25] uppercase">
           Jan Vařečka</h2>
+          <img src="/images/euka.png">
       </div>
       <div>
         <div class="mt-32 flex gap-9 flex-col">
@@ -49,7 +50,7 @@
         </div>
         <div class="mt-10">
           <div class="flex flex-col justify-center items-center gap-6">
-            <h2 class="text-[32px]">Kdyby to náhodou ještě někdo nevěděl</h2>
+            <h2 class="text-[32px] font-tinos">Kdyby to náhodou ještě někdo nevěděl</h2>
             <div class="-my-4">
               <i class="fa-regular fa-heart text-2xl"></i>
             </div>
@@ -78,7 +79,7 @@
             <img class="w-full rounded-2xl" src="/images/most.jpg" />
           </div>
           <div class="flex flex-col justify-center items-center gap-6 mt-12">
-            <h2 class="text-[32px]">O spoustu let později</h2>
+            <h2 class="text-[32px] font-tinos">O spoustu let později</h2>
             <div class="w-[5rem] -my-7">
               <svg viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" style="color: rgb(0, 0, 0);">
                 <g id="2_wedding_compound_path" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -122,7 +123,7 @@
               na koleni s&nbsp;prstýnkem v&nbsp;ruce.
             </p>
             <h2 class="text-2xl">
-              A jak to všechno doopravdy začne se dozvíte<br /> 14. 9. 2024.
+              A všechno to doopravdy začne<br /> 14. 9. 2024.
             </h2>
           </div>
         </div>
@@ -130,7 +131,7 @@
           <img class="w-full rounded-2xl" src="/images/bar.jpg" />
         </div>
         <div class="flex flex-col justify-center items-center gap-6 mt-12">
-          <h2 class="text-[32px]">
+          <h2 class="text-[32px] font-tinos">
             Program
           </h2>
           <p class="text-xl">
@@ -143,7 +144,7 @@
             </a>
             <div class="text-lg">
               <add-to-calendar-button tabindex="0" name="Svatba Aničky Zelenkové a Honzy Vařečky"
-                description="Přijďte s námi oslavit náš vysněný den" startDate="2024-09-14" endDate="2024-09-14"
+                startDate="2024-09-14" endDate="2024-09-14"
                 location="Dlouhý 1, 582 63 Slavíkov, Ždírec nad Doubravou" options="['Apple','Google']"
                 timeZone="Europe/Prague" trigger="click" inline listStyle="modal" iCalFileName="Wedding-Event"
                 label="Přidat do kalendáře" language="cs"
@@ -154,22 +155,21 @@
 
 
         <div id="form" class="flex flex-col justify-center items-center my-12 ">
-          <h2 class="text-[32px]">
-            RSVP
+          <h2 class="text-[32px] font-tinos">
+            Co od vás potřebujeme vědět?
           </h2>
-          <form class="sm:min-w-96 w-full px-[2rem] py-[3rem] bg-slate-100 rounded-2xl shadow"
+          <form class="sm:min-w-96 w-full p-[2rem] bg-slate-100 rounded-2xl shadow"
             name="submit-to-google-sheet">
-            <h3 class="text-lg font-bold">Co od vás potřebujeme vědět?</h3>
             <div>
               <h4 class="text-sm text-left py-2 font-bold">
                 Budete chtít zajistit ubytování?
               </h4>
               <div class="w-full mb-5 group flex items-center">
-                <input id="ubytovani-yes" type="radio" value="Ano" name="ubytovani" checked class="w-4 h-4 accent-gray-600">
+                <input id="ubytovani-yes" type="radio" value="Ano" name="Ubytovani" checked class="w-4 h-4 accent-gray-600">
                 <label for="ubytovani-yes" class="ms-2 text-sm font-medium text-gray-900">Ano</label>
               </div>
               <div class="w-full mb-5 group flex items-center">
-                <input id="ubytovani-no" type="radio" value="Ne" name="ubytovani" class="w-4 h-4 accent-gray-600">
+                <input id="ubytovani-no" type="radio" value="Ne" name="Ubytovani" class="w-4 h-4 accent-gray-600">
                 <label for="ubytovani-no" class="ms-2 text-sm font-medium text-gray-900">Ne</label>
               </div>
             </div>
@@ -178,15 +178,15 @@
                 Pokud budete chtít zajistit ubytování, budete chtít ubytování pouze na sobotu, nebo i pátek?
               </h4>
               <div class="w-full mb-5 group flex items-center">
-                <input id="day-saturday" type="radio" value="Sobota" name="denUbytovani" checked class="w-4 h-4 accent-gray-600">
+                <input id="day-saturday" type="radio" value="Sobota" name="DenUbytovani" checked class="w-4 h-4 accent-gray-600">
                 <label for="day-saturday" class="ms-2 text-sm font-medium text-gray-900">Pouze sobota</label>
               </div>
               <div class="w-full mb-5 group flex items-center">
-                <input id="both-days" type="radio" value="Sobota/Pátek" name="denUbytovani" class="w-4 h-4 accent-gray-600">
+                <input id="both-days" type="radio" value="Sobota/Pátek" name="DenUbytovani" class="w-4 h-4 accent-gray-600">
                 <label for="both-days" class="ms-2 text-sm font-medium text-gray-900">Sobota i pátek</label>
               </div>
               <div class="w-full mb-5 group flex items-center">
-                <input id="day-friday" type="radio" value="Pátek" name="denUbytovani" class="w-4 h-4 accent-gray-600">
+                <input id="day-friday" type="radio" value="Pátek" name="DenUbytovani" class="w-4 h-4 accent-gray-600">
                 <label for="day-friday" class="ms-2 text-sm font-medium text-gray-900">Pouze pátek</label>
               </div>
             </div>
@@ -195,11 +195,11 @@
                 Budete chtít pokoj v hotelu, nebo chatku?
               </h4>
               <div class="w-full mb-5 group flex items-center">
-                <input id="hotel-room" type="radio" value="Pokoj v hotelu" name="typUbytovani" checked class="w-4 h-4 accent-gray-600">
+                <input id="hotel-room" type="radio" value="Pokoj v hotelu" name="TypUbytovani" checked class="w-4 h-4 accent-gray-600">
                 <label for="hotel-room" class="ms-2 text-sm font-medium text-gray-900">Pokoj v hotelu</label>
               </div>
               <div class="w-full mb-5 group flex items-center">
-                <input id="cottage" type="radio" value="Chatka" name="typUbytovani" class="w-4 h-4 accent-gray-600">
+                <input id="cottage" type="radio" value="Chatka" name="TypUbytovani" class="w-4 h-4 accent-gray-600">
                 <label for="cottage" class="ms-2 text-sm font-medium text-gray-900">Chatka</label>
               </div>
             </div>
@@ -210,8 +210,8 @@
                   Děkujeme!</label>
                 <textarea id="accomodation-message" rows="4"
                   class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-md"
-                  placeholder="Nechci pokoj v hotelu, ale chatku" default-value="Nechci pokoj v hotelu, ale chatku"
-                  name="komentarUbytovani"></textarea>
+                  placeholder="Nechci pokoj v hotelu, ale chatku"
+                  name="KomentarUbytovani"></textarea>
               </div>
             </div>
             <div>
@@ -219,15 +219,15 @@
                 Strávíte s námi celý den, nebo máte v plánu odjet po obřadu, po obědě?
               </h4>
               <div class="w-full mb-5 group flex items-center">
-                <input id="whole-day" type="radio" value="Celý den" name="casNaSvatbe" checked class="w-4 h-4 accent-gray-600">
+                <input id="whole-day" type="radio" value="Celý den" name="CasNaSvatbe" checked class="w-4 h-4 accent-gray-600">
                 <label for="whole-day" class="ms-2 text-sm font-medium text-gray-900">Celý den</label>
               </div>
               <div class="w-full mb-5 group flex items-center">
-                <input id="after-ceremony" type="radio" value="Odjedu po obřadu" name="casNaSvatbe" class="w-4 h-4 accent-gray-600">
+                <input id="after-ceremony" type="radio" value="Odjedu po obřadu" name="CasNaSvatbe" class="w-4 h-4 accent-gray-600">
                 <label for="after-ceremony" class="ms-2 text-sm font-medium text-gray-900">Odjedu po obřadu</label>
               </div>
               <div class="w-full mb-5 group flex items-center">
-                <input id="after-lunch" type="radio" value="Odjedu po obědě" name="casNaSvatbe" class="w-4 h-4 accent-gray-600">
+                <input id="after-lunch" type="radio" value="Odjedu po obědě" name="CasNaSvatbe" class="w-4 h-4 accent-gray-600">
                 <label for="after-lunch" class="ms-2 text-sm font-medium text-gray-900">Odjedu po obědě</label>
               </div>
             </div>
@@ -238,7 +238,7 @@
                 <textarea id="allergies" rows="4"
                   class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-md"
                   placeholder="Jím všechno a nemám žádné potravinové alergie"
-                  default-value="Jím všechno a nemám žádné potravinové alergie" name="alergie"></textarea>
+                  name="Alergie"></textarea>
               </div>
             </div>
             <div class="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-2 grid-cols-1 lg:gap-6 md:gap-0 sm:gap-6 gap-0">
@@ -246,13 +246,13 @@
                 <label for="name" class="block mb-2 text-sm font-bold text-green text-left">Jméno</label>
                 <input type="text" id="name"
                   class="bg-gray-50 text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md" placeholder="Joe"
-                  name="jmeno" required>
+                  name="Name" required>
               </div>
               <div class="w-full mb-5 group">
                 <label for="surname" class="block mb-2 text-sm font-bold text-green text-left">Přijmení</label>
                 <input type="text" id="surname"
                   class="bg-gray-50  text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md" placeholder="Doe"
-                  name="prijmeni" required>
+                  name="Surname" required>
               </div>
             </div>
             <div class="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-2 grid-cols-1 lg:gap-6 md:gap-0 sm:gap-6 gap-0">
@@ -260,13 +260,13 @@
                 <label for="phone" class="block mb-2 text-sm font-bold text-green text-left">Telefon</label>
                 <input type="text" id="phone"
                   class="bg-gray-50  text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md"
-                  placeholder="123456789" name="telefon" inputmode="numeric" required>
+                  placeholder="123456789" name="Phone" inputmode="numeric" required>
               </div>
               <div class="w-full mb-5 group">
                 <label for="e-mail" class="block mb-2 text-sm font-bold text-green text-left">E-mail</label>
                 <input type="email" id="e-mail"
                   class="bg-gray-50 text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md"
-                  placeholder="vas-email@seznam.cz" name="email" required>
+                  placeholder="vas-email@seznam.cz" name="Email" required>
               </div>
             </div>
             <div class="flex justify-center">

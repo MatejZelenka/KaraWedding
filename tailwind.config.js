@@ -7,6 +7,7 @@ export default {
     extend: {
       fontFamily: {
         opensans: ['"Open Sans"', "sans-serif"],
+        tinos: ['"Tinos"', "sans-serif"],
       },
       boxShadow: {
         "3xl":
