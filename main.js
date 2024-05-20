@@ -4,40 +4,52 @@ import "@fortawesome/fontawesome-free/js/all.js";
 
 const addLoadingAnimation = (form) => {
   const spinner = form.querySelector("svg");
-  spinner.classList.remove("hidden");
-  spinner.classList.add("inline");
+  form.querySelector(".inner-button-text").innerHTML = "Odesílání formuláře...";
+  spinner.classList.replace("hidden", "inline");
 };
 
-const showAlert = (isSuccessfulRequest, form, alerts) => {
-  form.classList.add("hidden");
-  alerts.classList.remove("hidden");
-  alerts.classList.add("grid");
-  if (isSuccessfulRequest) {
-    alerts.querySelector("#alert-success").classList.remove("hidden");
-  } else {
-    alerts.querySelector("#alert-failure").classList.remove("hidden");
-  }
-};
-
-const resendForm = (form, alerts) => {
+const showAlert = (isSuccessfulRequest, form) => {
   const spinner = form.querySelector("svg");
+  const innerForm = form.querySelector(".inner-button-text");
+  if (isSuccessfulRequest) {
+    spinner.classList.replace("inline", "hidden");
+    innerForm.innerHTML = `Formulář byl odeslán!
+    <i class="fa-solid fa-check text-green-500 text-xl pl-2"></i>`;
 
-  if (form.classList.contains("hidden")) {
-    form.classList.remove("hidden");
-    form.classList.add("grid");
-    alerts.classList.remove("grid");
-    alerts.classList.add("hidden");
-    spinner.classList.remove("inline");
-    spinner.classList.add("hidden");
+    const inputs = [...form.querySelectorAll("input")];
+    const textareas = [...form.querySelectorAll("textarea")];
+
+    disableInputs(inputs);
+    disableInputs(textareas);
+  } else {
+    spinner.classList.replace("inline", "hidden");
+    innerForm.innerHTML = `Nepovedlo se to!
+    <i class="fa-solid fa-xmark text-red-500 text-xl pl-2"></i>`;
   }
+};
+
+const disableInputs = (inputArray) => {
+  return inputArray.map((item) => (item.disabled = true));
+};
+
+const prd = () => {
+  console.log([...document.querySelectorAll("#accomodation input")]);
+  [...document.querySelectorAll("#accomodation input")].map((item) => {
+    item.addEventListener("click", (e) => {
+      e.target.value === "Pokoj v hotelu"
+        ? toggleAccomodationTextArea(true)
+        : toggleAccomodationTextArea(false);
+    });
+  });
+};
+const toggleAccomodationTextArea = (value) => {
+  return (document.querySelector("#accomodation-message").disabled = value);
 };
 
 //url used from Google sheet app
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbzdvq2PZsd3W6Mw8XZRFQTpA8FweHGrhHQ-_bo4eFuRKntc4bh_2XuDy8y_fSD7r6-BGQ/exec";
 const form = document.forms["submit-to-google-sheet"];
-const alerts = document.querySelector("#alerts-menu");
-const resendFormButton = alerts.querySelector("#new-form");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -46,15 +58,13 @@ form.addEventListener("submit", (e) => {
   fetch(scriptURL, { method: "POST", body: new FormData(form) })
     .then((response) => {
       console.log("Success!", response);
-      showAlert(true, form, alerts);
+      showAlert(true, form);
     })
     .catch((error) => {
       console.error("Error!", error.message);
-      showAlert(false, form, alerts);
+      showAlert(false, form);
     });
 });
-
-resendFormButton.addEventListener("click", () => resendForm(form, alerts));
 
 const countdownInit = () => {
   const countdownDiv = document.querySelector("#countdown");
@@ -99,3 +109,4 @@ const getUnitInflection = (count, five, two, one) => {
 };
 
 countdownInit();
+prd();

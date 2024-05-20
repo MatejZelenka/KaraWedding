@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
-  "homepage": "https://matejzelenka.github.io/KaraWedding/",
+  "homepage": "http://honzaanicka.cz",
   "scripts": {
     "dev": "vite",
     "dev:mobile": "npm run dev -- --host",
