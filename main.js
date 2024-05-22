@@ -1,6 +1,7 @@
 import "/style.css";
 import "add-to-calendar-button";
 import "@fortawesome/fontawesome-free/js/all.js";
+import IMask from "imask";
 
 const addLoadingAnimation = (form) => {
   const spinner = form.querySelector("svg");
@@ -32,8 +33,7 @@ const disableInputs = (inputArray) => {
   return inputArray.map((item) => (item.disabled = true));
 };
 
-const prd = () => {
-  console.log([...document.querySelectorAll("#accomodation input")]);
+const toggleTextAreaState = () => {
   [...document.querySelectorAll("#accomodation input")].map((item) => {
     item.addEventListener("click", (e) => {
       e.target.value === "Pokoj v hotelu"
@@ -108,5 +108,28 @@ const getUnitInflection = (count, five, two, one) => {
   return "&nbsp;" + unit;
 };
 
+const switchContactCards = () => {
+  const anickaContactCard = document.querySelector("#anda-contact");
+  const honzaContactCard = document.querySelector("#honza-contact");
+  const jakubContactCard = document.querySelector("#jakub-contact");
+
+  const today = new Date();
+  const dateOfWedding = new Date(today.getFullYear(), 8, 14);
+
+  if (today < dateOfWedding) {
+    anickaContactCard.classList.remove("hidden");
+    honzaContactCard.classList.remove("hidden");
+  } else {
+    jakubContactCard.classList.remove("hidden");
+  }
+};
+
+const phoneInput = document.querySelector("#phone");
+const maskOptions = {
+  mask: "+{42\\0} 000-000-000",
+};
+const mask = IMask(phoneInput, maskOptions);
+
 countdownInit();
-prd();
+toggleTextAreaState();
+switchContactCards();
