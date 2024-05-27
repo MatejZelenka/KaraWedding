@@ -37,8 +37,8 @@ const toggleTextAreaState = () => {
   [...document.querySelectorAll("#accomodation input")].map((item) => {
     item.addEventListener("click", (e) => {
       e.target.value === "Pokoj v hotelu"
-        ? toggleAccomodationTextArea(true)
-        : toggleAccomodationTextArea(false);
+        ? toggleAccomodationTextArea(false)
+        : toggleAccomodationTextArea(true);
     });
   });
 };
