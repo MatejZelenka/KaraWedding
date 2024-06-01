@@ -18,10 +18,12 @@ const showAlert = (isSuccessfulRequest, form) => {
     <i class="fa-solid fa-check text-green-500 text-xl pl-2"></i>`;
 
     const inputs = [...form.querySelectorAll("input")];
-    const textareas = [...form.querySelectorAll("textarea")];
+    const textAreas = [...form.querySelectorAll("textarea")];
+    const sendButton = [...form.querySelectorAll("button")];
 
     disableInputs(inputs);
-    disableInputs(textareas);
+    disableInputs(sendButton);
+    disableInputs(textAreas);
   } else {
     spinner.classList.replace("inline", "hidden");
     innerForm.innerHTML = `Nepovedlo se to!
@@ -37,12 +39,12 @@ const toggleTextAreaState = () => {
   [...document.querySelectorAll("#accomodation input")].map((item) => {
     item.addEventListener("click", (e) => {
       e.target.value === "Pokoj v hotelu"
-        ? toggleAccomodationTextArea(false)
-        : toggleAccomodationTextArea(true);
+        ? toggleAccommodationTextArea(false)
+        : toggleAccommodationTextArea(true);
     });
   });
 };
-const toggleAccomodationTextArea = (value) => {
+const toggleAccommodationTextArea = (value) => {
   return (document.querySelector("#accomodation-message").disabled = value);
 };
 
@@ -55,7 +57,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   addLoadingAnimation(form);
 
-  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+  fetch(scriptURL, {method: "POST", body: new FormData(form)})
     .then((response) => {
       console.log("Success!", response);
       showAlert(true, form);
@@ -79,34 +81,12 @@ const countdownInit = () => {
   }, 1000);
 };
 
-const getDays = (distance) => {
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  return days + getUnitInflection(days, "d", "d", "d");
-};
-const getHours = (distance) => {
-  const hours = Math.floor(
-    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  return hours + getUnitInflection(hours, "h", "h", "h");
-};
-const getMinutes = (distance) => {
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  return minutes + getUnitInflection(minutes, "min", "min", "min");
-};
-const getSeconds = (distance) => {
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  return seconds + getUnitInflection(seconds, "s", "s", "s");
-};
-
-const getUnitInflection = (count, five, two, one) => {
-  let unit = five;
-  if (count > 1 && count < 5) {
-    unit = two;
-  } else if (count === 1) {
-    unit = one;
-  }
-  return "&nbsp;" + unit;
-};
+const getDays = (distance) => Math.floor(distance / (1000 * 60 * 60 * 24)) + " d";
+const getHours = (distance) => Math.floor(
+  (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+) + " h";
+const getMinutes = (distance) => Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) + " min";
+const getSeconds = (distance) => Math.floor((distance % (1000 * 60)) / 1000) + " s";
 
 const switchContactCards = () => {
   const anickaContactCard = document.querySelector("#anda-contact");
