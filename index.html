@@ -36,7 +36,7 @@
   <main class="grid lg:grid-cols-3 md:grid-rows-1 sm:grid-rows-1 grid-rows-1">
     <div class="lg:col-span-2">
       <div class="overflow-hidden sticky top-0 w-full lg:h-[100vh] md:h-[50vh] sm:h-[50vh] h-[50vh]">
-        <img src="/images/uvodni-fotka.jpg" class="w-[100%] h-[100%] object-cover"  alt="Uvodni fotka" aria-hidden="true"/>
+        <img src="/images/uvodni-fotka.jpg" class="w-[100%] h-[100%] object-cover" loading="eager"  alt="Uvodni fotka" aria-hidden="true"/>
       </div>
     </div>
     <div
@@ -96,7 +96,7 @@
             </p>
           </div>
           <div class="mt-12">
-            <img class="w-full rounded-2xl" src="/images/most.jpg" alt="Na moste" aria-hidden="true"/>
+            <img class="w-full rounded-2xl" src="/images/most.jpg" alt="Na moste" aria-hidden="true" loading="lazy"/>
           </div>
           <div class="flex flex-col justify-center items-center gap-6 mt-12">
             <h2 class="text-[32px] font-tinos">O spoustu let později</h2>
@@ -137,7 +137,7 @@
           </div>
         </div>
         <div class="mt-12">
-          <img class="w-full rounded-2xl" src="/images/bar.jpg" alt="Bar" aria-hidden="true"/>
+          <img class="w-full rounded-2xl" src="/images/bar.jpg" alt="Bar" aria-hidden="true" loading="lazy"/>
         </div>
         <div class="flex flex-col justify-center items-center gap-6 mt-12">
           <h2 class="text-[32px] font-tinos">
@@ -351,7 +351,7 @@
             </p>
             <div class="w-full max-w-sm rounded-2xl shadow py-4 bg-slate-100 hidden" id="anda-contact">
               <div class="flex flex-col items-center">
-                <img class="w-24 h-24 mb-3 rounded-full shadow-lg object-cover" src="/images/anda-kontakt.jpg"
+                <img class="w-24 h-24 mb-3 rounded-full shadow-lg object-cover" src="/images/anda-kontakt.jpg" loading="lazy"
                   alt="Anička Zelenková" />
                 <h5 class="mb-1 text-xl font-medium text-gray-900">Anička Zelenková</h5>
                 <div class="flex mt-2">
@@ -363,7 +363,7 @@
             <div class="w-full max-w-sm rounded-2xl shadow py-4  bg-slate-100 hidden" id="honza-contact">
               <div class="flex flex-col items-center">
                 <img class="w-24 h-24 mb-3 rounded-full shadow-lg object-cover" src="/images/honza-kontakt.png"
-                  alt="Anička Zelenková" />
+                  alt="Honza Varecka" loading="lazy" />
                 <h5 class="mb-1 text-xl font-medium text-gray-900">Honza Vařečka</h5>
                 <div class="flex mt-2">
                   <a href="tel:+420731460823"
@@ -374,7 +374,7 @@
             <div class="w-full max-w-sm rounded-2xl shadow py-4  bg-slate-100 hidden" id="jakub-contact">
               <div class="flex flex-col items-center">
                 <img class="w-24 h-24 mb-3 rounded-full shadow-lg object-cover" src="/images/anda-kontakt.jpg"
-                  alt="Anička Zelenková" />
+                  alt="Kuba Zelenka" loading="lazy" />
                 <h5 class="mb-1 text-xl font-medium text-gray-900">Jakub Zelenka</h5>
                 <div class="flex mt-2">
                   <a href="tel:+420734711701"
@@ -403,9 +403,3 @@
 </body>
 
 </html>
-
-<template>
-  <div class="lg:w-[60%] md:w-[50%] sm:w-[50%] w-[60%]">
-    <img src="/images/euka.png" class="rotate-180">
-  </div>
-</template>
