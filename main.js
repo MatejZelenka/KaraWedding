@@ -47,6 +47,25 @@ const toggleTextAreaState = () => {
 const toggleAccommodationTextArea = (value) => {
   return (document.querySelector("#accomodation-message").disabled = value);
 };
+const disableInputGroup = () => {
+  const inputElements = [
+    ...document.querySelectorAll("#accomodation-day input"),
+    ...document.querySelectorAll("#accomodation input"),
+  ];
+
+  const messageElement = document.querySelector("#accomodation-message");
+  const allElements = [...inputElements, messageElement];
+  const ubytovaniRadioButtons = document.querySelectorAll('input[name="Ubytovani"]');
+  ubytovaniRadioButtons.forEach(radioButton => {
+    radioButton.addEventListener("click", () => {
+      if (radioButton.value === "Ano") {
+        allElements.forEach(element => element.disabled = false);
+      } else {
+        allElements.forEach(element => element.disabled = true);
+      }
+    });
+  });
+};
 
 //url used from Google sheet app
 const scriptURL =
@@ -113,3 +132,4 @@ const mask = IMask(phoneInput, maskOptions);
 countdownInit();
 toggleTextAreaState();
 switchContactCards();
+disableInputGroup();
