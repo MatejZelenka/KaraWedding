@@ -67,8 +67,8 @@
         </div>
         <div class="mt-20">
           <a class="block mx-auto text-slate bg-stone-500 hover:bg-stone-700 font-semibold rounded-lg text-base px-5 py-3 w-[185px] hover:scale-105"
-            href="#form">
-            Zúčastním se
+             href="https://maps.app.goo.gl/S3L2dPDGXr4jf2bXA" target="_blank">
+            Kde se potkáme
           </a>
         </div>
         <div class="mt-10">
@@ -191,247 +191,34 @@
               href="https://maps.app.goo.gl/S3L2dPDGXr4jf2bXA" target="_blank">
               Kde se potkáme
             </a>
-            <div class="text-lg">
-              <add-to-calendar-button tabindex="0" name="Svatba Aničky Zelenkové a Honzy Vařečky" startDate="2024-09-14"
-                endDate="2024-09-14" location="Dlouhý 1, 582 63 Slavíkov, Ždírec nad Doubravou"
-                options="['Apple','Google']" timeZone="Europe/Prague" trigger="click" inline listStyle="modal"
-                iCalFileName="Wedding-Event" label="Přidat do kalendáře" language="cs" hideIconButton hideCheckmark
-                styleLight="--btn-background: #494745; --btn-text: #f8f4ef; --btn-hover-background: #3c3a38; --btn-hover-text: #fff; --btn-border-radius: 8px; --btn-border: #fff; --btn-shadow: none; --btn-hover-shadow: none; --btn-active-shadow: none"></add-to-calendar-button>
-            </div>
           </div>
         </div>
 
-        <div id="form" class="flex flex-col justify-center items-center my-12 px-2">
-          <h2 class="text-[32px] font-tinos pb-2">
-            Co od vás potřebujeme vědět?
+      <div class="flex flex-col justify-center items-center my-12 px-2">
+        <div class="flex flex-col justify-center items-center gap-6 mt-12">
+          <h2 class="text-[32px] font-tinos">
+            Potřebujete další informace?
           </h2>
-          <form class="xl:px-8 lg:px-8 md:px-8 sm:px-8 px-4 py-4 bg-slate-100 rounded-2xl shadow"
-            name="submit-to-google-sheet">
-            <div>
-              <h4 class="text-sm text-left py-2 font-bold">
-                Budete chtít zajistit ubytování?
-              </h4>
-              <div class="w-full mb-5 group flex items-center">
-                <input id="ubytovani-yes" type="radio" value="Ano" name="Ubytovani" checked
-                  class="w-4 h-4 accent-gray-600">
-                <label for="ubytovani-yes" class="ms-2 text-sm font-medium text-gray-900">Ano</label>
-              </div>
-              <div class="w-full mb-5 group flex items-center">
-                <input id="ubytovani-no" type="radio" value="Ne" name="Ubytovani" class="w-4 h-4 accent-gray-600">
-                <label for="ubytovani-no" class="ms-2 text-sm font-medium text-gray-900">Ne</label>
-              </div>
-            </div>
-            <div id="accomodation-day">
-              <h4 class="text-sm text-left py-2 font-bold">
-                Pokud budete chtít zajistit ubytování, budete chtít ubytování pouze na sobotu, nebo i pátek?
-              </h4>
-              <div class="w-full mb-5 group flex items-center">
-                <input id="day-saturday" type="radio" value="Sobota" name="DenUbytovani" checked
-                  class="w-4 h-4 accent-gray-600">
-                <label for="day-saturday" class="ms-2 text-sm font-medium text-gray-900">Pouze sobota</label>
-              </div>
-              <div class="w-full mb-5 group flex items-center">
-                <input id="both-days" type="radio" value="Sobota/Pátek" name="DenUbytovani"
-                  class="w-4 h-4 accent-gray-600">
-                <label for="both-days" class="ms-2 text-sm font-medium text-gray-900">Sobota i pátek</label>
-              </div>
-              <div class="w-full mb-5 group flex items-center">
-                <input id="day-friday" type="radio" value="Pátek" name="DenUbytovani" class="w-4 h-4 accent-gray-600">
-                <label for="day-friday" class="ms-2 text-sm font-medium text-gray-900">Pouze pátek</label>
-              </div>
-            </div>
-            <div id="accomodation">
-              <h4 class="text-sm text-left py-2 font-bold">
-                Budete chtít pokoj v hotelu, nebo chatku?
-              </h4>
-              <div class="w-full mb-5 group flex items-center">
-                <input id="hotel-room" type="radio" value="Pokoj v hotelu" name="TypUbytovani" checked
-                  class="w-4 h-4 accent-gray-600">
-                <label for="hotel-room" class="ms-2 text-sm font-medium text-gray-900">Pokoj v hotelu</label>
-              </div>
-              <div class="w-full mb-5 group flex items-center">
-                <input id="cottage" type="radio" value="Chatka" name="TypUbytovani" class="w-4 h-4 accent-gray-600">
-                <label for="cottage" class="ms-2 text-sm font-medium text-gray-900">Chatka</label>
-              </div>
-            </div>
-            <div>
-              <div class="w-full mb-5 group">
-                <label for="accomodation-message" class="block mb-2 text-sm font-bold text-gray-900 text-left">Pro kolik
-                  lidí
-                  budete chtít pokoj v hotelu? Dejte nám, prosím, vědět, kolik z těch lidí bude dospělých a kolik dětí.
-                  Děkujeme!</label>
-                <textarea id="accomodation-message" rows="4"
-                  class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-md disabled:bg-gray-100 disabled:text-gray-500"
-                  placeholder="Nechci pokoj v hotelu, ale chatku" name="KomentarUbytovani"></textarea>
-              </div>
-            </div>
-            <div>
-              <h4 class="text-sm text-left py-2 font-bold">
-                Strávíte s námi celý den, nebo máte v plánu odjet po obřadu, po obědě?
-              </h4>
-              <div class="w-full mb-5 group flex items-center">
-                <input id="whole-day" type="radio" value="Celý den" name="CasNaSvatbe" checked
-                  class="w-4 h-4 accent-gray-600">
-                <label for="whole-day" class="ms-2 text-sm font-medium text-gray-900">Celý den</label>
-              </div>
-              <div class="w-full mb-5 group flex items-center">
-                <input id="after-ceremony" type="radio" value="Odjedu po obřadu" name="CasNaSvatbe"
-                  class="w-4 h-4 accent-gray-600">
-                <label for="after-ceremony" class="ms-2 text-sm font-medium text-gray-900">Odjedu po obřadu</label>
-              </div>
-              <div class="w-full mb-5 group flex items-center">
-                <input id="after-lunch" type="radio" value="Odjedu po obědě" name="CasNaSvatbe"
-                  class="w-4 h-4 accent-gray-600">
-                <label for="after-lunch" class="ms-2 text-sm font-medium text-gray-900">Odjedu po obědě</label>
-              </div>
-            </div>
-            <div>
-              <div class="w-full mb-5 group">
-                <label for="allergies" class="block mb-2 text-sm font-bold text-gray-900 text-left">Máte nějaké
-                  stravovací preference, nebo je něco důležitého, co bychom měli vědět?</label>
-                <textarea id="allergies" rows="4"
-                  class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-md disabled:bg-gray-100 disabled:text-gray-500"
-                  placeholder="Vypište svoje potravinové alergie, diety..."
-                  name="Alergie">Jím všechno a nemám žádné potravinové alergie</textarea>
-              </div>
-            </div>
-            <div class="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 lg:gap-6 md:gap-6 sm:gap-6 gap-0">
-              <div class="w-full mb-5 group">
-                <label for="name" class="block mb-2 text-sm font-bold text-green text-left">Jméno</label>
-                <input type="text" id="name"
-                  class="bg-gray-50 text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md disabled:bg-gray-100 disabled:text-gray-500"
-                  placeholder="Honza" name="Name" required>
-              </div>
-              <div class="w-full mb-5 group">
-                <label for="surname" class="block mb-2 text-sm font-bold text-green text-left">Přijmení</label>
-                <input type="text" id="surname"
-                  class="bg-gray-50  text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md disabled:bg-gray-100 disabled:text-gray-500"
-                  placeholder="Veselý" name="Surname" required>
-              </div>
-            </div>
-            <div class="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 lg:gap-6 md:gap-6 sm:gap-6 gap-0">
-              <div class="w-full mb-5 group">
-                <label for="phone" class="block mb-2 text-sm font-bold text-green text-left">Telefon</label>
-                <input type="text" id="phone"
-                  class="bg-gray-50  text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md disabled:bg-gray-100 disabled:text-gray-500"
-                  placeholder="999-999-999" name="Phone" inputmode="numeric" required>
-              </div>
-              <div class="w-full mb-5 group">
-                <label for="e-mail" class="block mb-2 text-sm font-bold text-green text-left">E-mail</label>
-                <input type="email" id="e-mail"
-                  class="bg-gray-50 text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md disabled:bg-gray-100 disabled:text-gray-500"
-                  placeholder="vas-email@seznam.cz" name="Email" required>
-              </div>
-            </div>
-            <div class="flex justify-center">
-              <button type="submit"
-                class="flex justify-center gap-2 items-center text-slate bg-stone-500 hover:bg-stone-700 font-semibold rounded-lg text-base px-5 py-3 text-center hover:scale-105">
-                <svg aria-hidden="true" class="w-5 h-5 text-gray-200 animate-spin fill-neutral-900 mr-3 hidden"
-                  viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
-                    fill="currentColor" />
-                  <path
-                    d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
-                    fill="currentFill" />
-                </svg>
-                <span class="inner-button-text">
-                  Odeslat formulář
-                  <i class="fa-solid fa-check text-green-500 text-xl hidden"></i>
-                  <i class="fa-solid fa-xmark text-red-500 text-xl hidden"></i>
-                </span>
-              </button>
-              <div class="absolute top-[-8px] right-[22%]">
-              </div>
-            </div>
-          </form>
-
-          <div class="flex flex-col justify-center items-center gap-6 mt-12">
-            <h2 class="text-[32px] font-tinos">
-              Co byste měli vědět?
-            </h2>
-            <p>
-              Ubytování je možné zajistit přímo na Dlouhém, takže nebudete muset večer nikam daleko jezdit. Vybrat si
-              můžete z pokojů v hotelu, nebo v chatkách.
-            </p>
-            <p>
-              Cena pokojů v hotelu začíná přibližně na 500 Kč za noc, v chatkách na 315 Kč za noc.
-            </p>
-            <p>
-              Moc dobře víme, že někteří z vás pojedou z daleka, ale zároveň nechtějí brzy vstávat. Tomu naprosto
-              rozumíme a určitě vám rádi zajistíme ubytování už na pátek.
-            </p>
-            <p>
-              Počítejte ale, prosím, s tím, že se vám v pátek nebudeme moci věnovat a nebude žádný oficiální program.
-              Moc děkujeme!
-            </p>
-          </div>
-          <div class="flex flex-col justify-center items-center gap-6 mt-12">
-            <h2 class="text-[32px] font-tinos">
-              Jak je to se svatebními dary?
-            </h2>
-            <p>
-              Nemáme v tento okamžik žádné konkrétní věci, které bychom potřebovali. Navíc se těch věcí snažíme mít spíš
-              méně, než více.
-            </p>
-            <p>
-              Budeme tedy rádi, když se rozhodnete nám nekupovat žádné věcné dary, ale případně nám přispějete na naši
-              svatbu a společný život. Moc děkujeme!
-            </p>
-          </div>
-          <div class="flex flex-col justify-center items-center gap-6 mt-12">
-            <h2 class="text-[32px] font-tinos">
-              Potřebujete další informace?
-            </h2>
-            <p>
-              Věříme, že vše bude připravené tak, abyste si s námi naši svatbu mohli bez rušení užít.
-            </p>
-            <p>
-              Pokud ale budete potřebovat nějaké informace, můžete se spojit s
-            </p>
-            <div class="w-full max-w-sm rounded-2xl shadow py-4 bg-slate-100 hidden" id="anda-contact">
-              <div class="flex flex-col items-center">
-                <img class="w-24 h-24 mb-3 rounded-full shadow-lg object-cover" src="/images/anda-kontakt.jpg" loading="lazy"
-                  alt="Anička Zelenková" />
-                <h5 class="mb-1 text-xl font-medium text-gray-900">Anička Zelenková</h5>
-                <div class="flex mt-2">
-                  <a href="tel:+420730145623"
-                    class="py-2 px-4 ms-2 text-sm font-medium text-slate bg-stone-500 hover:bg-stone-700 rounded-lg hover:scale-105">Zavolat</a>
-                </div>
-              </div>
-            </div>
-            <div class="w-full max-w-sm rounded-2xl shadow py-4  bg-slate-100 hidden" id="honza-contact">
-              <div class="flex flex-col items-center">
-                <img class="w-24 h-24 mb-3 rounded-full shadow-lg object-cover" src="/images/honza-kontakt.png"
-                  alt="Honza Varecka" loading="lazy" />
-                <h5 class="mb-1 text-xl font-medium text-gray-900">Honza Vařečka</h5>
-                <div class="flex mt-2">
-                  <a href="tel:+420731460823"
-                    class="py-2 px-4 ms-2 text-sm font-medium text-slate bg-stone-500 hover:bg-stone-700 rounded-lg hover:scale-105">Zavolat</a>
-                </div>
-              </div>
-            </div>
-            <div class="w-full max-w-sm rounded-2xl shadow py-4  bg-slate-100 hidden" id="jakub-contact">
-              <div class="flex flex-col items-center">
-                <img class="w-24 h-24 mb-3 rounded-full shadow-lg object-cover" src="/images/anda-kontakt.jpg"
-                  alt="Kuba Zelenka" loading="lazy" />
-                <h5 class="mb-1 text-xl font-medium text-gray-900">Jakub Zelenka</h5>
-                <div class="flex mt-2">
-                  <a href="tel:+420734711701"
-                    class="py-2 px-4 ms-2 text-sm font-medium text-slate bg-stone-500 hover:bg-stone-700 rounded-lg hover:scale-105">Zavolat</a>
-                </div>
+          <p>
+            Věříme, že vše bude připravené tak, abyste si s námi naši svatbu mohli bez rušení užít.
+          </p>
+          <p>
+            Pokud ale budete potřebovat nějaké informace, můžete se spojit s
+          </p>
+          <div class="w-full max-w-sm rounded-2xl shadow py-4  bg-slate-100" id="jakub-contact">
+            <div class="flex flex-col items-center">
+              <img class="w-24 h-24 mb-3 rounded-full shadow-lg object-cover" src="/images/kuba.png"
+                   alt="Kuba Zelenka" loading="lazy" />
+              <h5 class="mb-1 text-xl font-medium text-gray-900">Jakub Zelenka</h5>
+              <div class="flex mt-2">
+                <a href="tel:+420734711701"
+                   class="py-2 px-4 ms-2 text-sm font-medium text-slate bg-stone-500 hover:bg-stone-700 rounded-lg hover:scale-105">Zavolat</a>
               </div>
             </div>
           </div>
 
-          <div class="flex flex-col justify-center items-center gap-6 mt-12">
-            <h2 class="text-[32px] font-tinos">Moc se na vás těšíme!</h2>
-            <div>
-              <span>a teď už jenom neztratit prstýnek..</span><a class="text-blue-500 underline" href="https://www.youtube.com/watch?v=0ro6yiJqKTU" target="_blank">.</a>
-            </div>
-          </div>
+      </div>
 
-        </div>
         <footer class="flex flex-col justify-center items-center py-6 mt-6 italic relative min-w-80">
           <div class="before:content-[''] absolute top-0 left-[5%] right-[5%] h-[1px] custom-gradient"></div>
           &copy; Matěj Zelenka

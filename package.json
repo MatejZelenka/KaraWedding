@@ -11,16 +11,12 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1",
-    "vite": "5.1.0-beta.2"
+    "vite": "5.2.6"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
-    "add-to-calendar-button": "^2.6.13",
     "autoprefixer": "^10.4.16",
-    "imask": "^7.6.1",
     "postcss": "^8.4.33",
-    "spotlight.js": "^0.7.8",
     "tailwindcss": "^3.4.1"
   }
 }
